@@ -8,7 +8,7 @@
     "pre-commit": "npm run lint && npm run prettier-check",
     "pre-push": "npm run build && npm run deploy",
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "rm -rf out && next build && next export",
     "deploy": "gh-pages -d out"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "@connectedhomes/nucleus": "^2.2.12",
     "next": "^12.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
